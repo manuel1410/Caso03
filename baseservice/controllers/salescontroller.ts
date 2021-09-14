@@ -1,5 +1,7 @@
 import { sales_data } from "../repositories/sales_data";
 import { Logger } from "../common";
+import { Request, ParamsDictionary } from "express-serve-static-core";
+import { ParsedQs } from "qs";
 
 export class salesController {
 
@@ -32,5 +34,24 @@ export class salesController {
         const salesdb = new sales_data();
         return salesdb.ItemsfindAll();
     }
+    
+    public itemscreate(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.Itemscreate(req);
+    }
+
+    public itemsdelete(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.Itemsdelete(req);
+    }
+
+    public itemsstatusupdate(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.ItemsstatusUpdate(req);
+    }
+    
 
 }
