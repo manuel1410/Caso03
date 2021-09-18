@@ -1,0 +1,21 @@
+{
+    "name": "Manuel Alejandro",
+    "lastname": "Casasola Mayorga",
+    "email": "mcasasolam@gmail.com",
+    "password": "123456",
+    "birthdate": "2001-10-14",
+    "products": [],
+    "deleted": false
+}
+
+{
+    "name": "Esteven",
+    "lastname": "Fernandez Hernandez",
+    "email": "estevenfernandez@gmail.com",
+    "password": "1234abcd",
+    "birthdate": "2000-02-25",
+    "products": [],
+    "deleted": false
+}
+
+docker run --name caso03 -p 27017:27017 mongo

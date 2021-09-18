@@ -4,16 +4,13 @@
     "year": 2017,
     "imgURL": "www.images.com/image01",
     "initialPrice": 100000,
-    "lastPrice": 100000,
+    "lastPrice": [],
     "currency": "usd",
     "creationDate":"2021-09-14T13:37:27+00:00",
     "maxDate": "2021-09-30T13:37:27+00:00",
-    "ownerName": "Manuel Casasola Mayorga",
-    "ownerId": "118240620",
-    "ownerEmail": "mcasasolam@gmail.com",
-    "active": true,
-    "buyer": {"name": "Esteven Fernandez Hernandez", "id": "ABCDE12345"}
-
+    "owner": {"ownerName": "Manuel Casasola Mayorga", "ownerId": "614586558ada72679ac01852", "ownerEmail": "mcasasolam@gmail.com"},
+    "sold": false,
+    "deleted": false
 }
 {
     "name": "Corsair RGB Keyboard",
@@ -21,16 +18,13 @@
     "year": 2019,
     "imgURL": "www.images.com/image02",
     "initialPrice": 20000,
-    "lastPrice": 20000,
+    "lastPrice": [],
     "currency": "usd",
-    "creationDate":20210914,
-    "maxDate": 20210931,
-    "ownerName": "Manuel Casasola Mayorga",
-    "ownerId": "118240620",
-    "ownerEmail": "mcasasolam@gmail.com",
-    "active": true,
-    "buyer": {"name": "Esteven Fernandez Hernandez", "id": "ABCDE12345"}
-
+    "creationDate":"2021-09-14T13:37:27+00:00",
+    "maxDate": "2021-09-30T13:37:27+00:00",
+    "owner": {"ownerName": "Manuel Casasola Mayorga", "ownerId": "614586558ada72679ac01852", "ownerEmail": "mcasasolam@gmail.com"},
+    "sold": false,
+    "deleted": false
 }
 {
     "name": "Corsair RGB Mouse",
@@ -38,14 +32,11 @@
     "year": 2020,
     "imgURL": "www.images.com/image03",
     "initialPrice": 5000,
-    "lastPrice": 5000,
+    "lastPrice": [],
     "currency": "usd",
     "creationDate":"2021-09-14T13:37:27+00:00",
     "maxDate": "2021-09-30T13:37:27+00:00",
-    "ownerName": "Manuel Casasola Mayorga",
-    "ownerId": "118240620",
-    "ownerEmail": "mcasasolam@gmail.com",
-    "active": true,
-    "buyer": {"name": "Esteven Fernandez Hernandez", "id": "ABCDE12345"}
-
+    "owner": {"ownerName": "Manuel Casasola Mayorga", "ownerId": "614586558ada72679ac01852", "ownerEmail": "mcasasolam@gmail.com"},
+    "sold": false,
+    "deleted": false
 }
