@@ -1,0 +1,64 @@
+<div class="cards product-results"></div>
+
+<!-- Templates -->
+<script type="text/template" id="card-template">
+    <div class="card {{attributes}}">
+        <div class="photo">
+            <!-- <img src="{{imgUrl}}"/> -->
+            <div class="img" style="background-image: url({{imgURL}});"></div>
+
+            <div class="price">
+                {{lastPrice}}<span class="currency"> {{currency}}</span>
+            </div>
+            <div class="priceinit">
+                {{initialPrice}}<span class="currency"> {{currency}}</span>
+            </div>
+                <div class="title">
+                    <div class="year-label">
+                    {{year}}
+                </div>
+                <div class="maxdate-label">
+                    {{maxDatepretty}} {{maxDateHour}}
+                </div>
+                <h3>{{name}}</h3>
+            </div>
+        </div>
+        <div class="description animate">
+            <div class="title">
+                <h3>{{name}}</h3>
+            </div>
+            {{description}}
+            
+            <div class="creationdate">
+            Fecha de publicación: {{creationDatepretty}} 
+            </div>
+            
+            <div class="maxdate">
+            Fecha de cierre: {{maxDatepretty}} {{maxDateHour}}
+            </div>
+            
+            <div class="initialdate">
+            Precio inicial: {{initialPrice}}
+        		</div>
+            
+             <div class="lastprice">
+            Última oferta: {{lastPrice}}
+        		</div>
+            
+            <div class="ownername">
+            Dueño: {{owner.ownerName}}
+        		</div>
+            
+            <div class="owneremail">
+            Contacto: {{owner.ownerEmail}}
+        		</div>
+            
+           
+        	</div>
+            <div class="callToAction">
+                    <a href="#">View</a>
+            </div>
+        </div>
+    </div>
+</script>
+

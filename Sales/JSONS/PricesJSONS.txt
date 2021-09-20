@@ -1,0 +1,14 @@
+{
+	"minprice":  10000,
+	"maxprice": 100000
+}
+
+{
+	"minprice":  50000,
+	"maxprice": 200000
+}
+
+{
+	"minprice":  1000000,
+	"maxprice": 4000000
+}
