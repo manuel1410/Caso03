@@ -1,1 +1,0 @@
-export { salesController } from './salescontroller'
