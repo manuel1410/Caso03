@@ -1,0 +1,1 @@
+export { salesController } from './salescontroller'
