@@ -39,6 +39,12 @@ export class salesController {
         return salesdb.Usersfind();
     }
 
+    public usersfindbyid(json: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.UsersfindByid(json);
+    }
+
     public itemsfindall() : Promise<any>
     {
         const salesdb = new sales_data();
@@ -49,6 +55,36 @@ export class salesController {
     {
         const salesdb = new sales_data();
         return salesdb.Itemsfind();
+    }
+
+    public itemsfindbyid(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.ItemsfindByid(req);
+    }
+
+    public itemsfindsold() : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.ItemsfindSold();
+    }
+
+    public itemsfinddates(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.ItemsfindDates(req);
+    }
+
+    public itemsfindrangeprices(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.ItemsfindRangeprices(req);
+    }
+
+    public itemsfindrangeyears(req: any) : Promise<any>
+    {
+        const salesdb = new sales_data();
+        return salesdb.ItemsfindRangeyears(req);
     }
 
     public async userscreate(req: any) : Promise<any>
@@ -81,14 +117,52 @@ export class salesController {
     
     public itemscreate(req: any) : Promise<any>
     {
+
+        var json = req;
+
+
+        const initdateString = json.creationDate;
+        const initdate_aux = new Date(initdateString);
+        const initdateUTC = initdate_aux.setTime(initdate_aux.getTime()+(6*60*60*1000));
+        const initdate = new Date(initdateUTC);
+
+        const lastdateString = json.maxDate;
+        const lastdate_aux = new Date(lastdateString);
+        const lastdateUTC = lastdate_aux.setTime(lastdate_aux.getTime()+(6*60*60*1000));
+        const lastdate = new Date(lastdateUTC);
+
+        const prettyinitdate = initdate.toLocaleDateString();
+        const initdatehour = initdate.toLocaleTimeString();
+        const prettylastdate = lastdate.toLocaleDateString();
+        const lastdatehour = lastdate.toLocaleTimeString();
+
+
+        json.lastPrice = json.initialPrice;
+        json.creationDatepretty = prettyinitdate;
+        json.creationDateHour = initdatehour;
+        json.maxDatepretty = prettylastdate;
+        json.maxDateHour = lastdatehour;
+
         const salesdb = new sales_data();
-        return salesdb.Itemscreate(req);
+        return salesdb.Itemscreate(json);
     }
 
     public itemsdelete(req: any) : Promise<any>
     {
         const salesdb = new sales_data();
         return salesdb.Itemsdelete(req);
+    }
+
+    public Itemscheckdate(req: any) : Promise<any>
+    {
+
+        const date = new Date(req.date);
+
+        const json = req;
+        json.date = date;
+
+        const salesdb = new sales_data();
+        return salesdb.ItemsCheckdate(json);
     }
 
     public itemsstatusupdate(req: any) : Promise<any>
@@ -125,8 +199,11 @@ export class salesController {
             
             if(item.sold === false){
 
+                if(req.offer.amount >= item.initialPrice){
                 const salesdb = new sales_data();
                 return salesdb.ItemspushPrice(req);
+                }
+
             }
         }
         

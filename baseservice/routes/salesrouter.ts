@@ -18,6 +18,19 @@ app.get("/usersfind", (req, res, next) => {
 
 });
 
+app.get("/usersfindbyid", (req, res, next) => {
+
+    salesController.getInstance().usersfindbyid(req.body)
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
 app.get("/itemsfindall", (req, res, next) => {
 
     salesController.getInstance().itemsfindall()
@@ -34,6 +47,71 @@ app.get("/itemsfindall", (req, res, next) => {
 app.get("/itemsfind", (req, res, next) => {
 
     salesController.getInstance().itemsfind()
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
+app.get("/itemsfindbyid", (req, res, next) => {
+
+    salesController.getInstance().itemsfindbyid(req.body)
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
+app.get("/itemsfindsold", (req, res, next) => {
+
+    salesController.getInstance().itemsfindsold()
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
+app.get("/itemsfinddates", (req, res, next) => {
+
+    salesController.getInstance().itemsfinddates(req.body)
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
+app.get("/itemsfindrangeprices", (req, res, next) => {
+
+    salesController.getInstance().itemsfindrangeprices(req.body)
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
+app.get("/itemsfindrangeyears", (req, res, next) => {
+
+    salesController.getInstance().itemsfindrangeyears(req.body)
     .then((data)=>{
         res.json(data);
     })
@@ -70,9 +148,22 @@ app.post("/userscreate", (req, res, next) => {
 
 });
 
-app.delete("/itemsdelete", (req, res, next) => {
+app.put("/itemsdelete", (req, res, next) => {
     
     salesController.getInstance().itemsdelete(req.body)
+    .then((data)=>{
+        res.json(data);
+    })
+    .catch((err)=>{
+        log.error(err);
+        return "";
+    })
+
+});
+
+app.put("/itemscheckdate", (req, res, next) => {
+    
+    salesController.getInstance().Itemscheckdate(req.body)
     .then((data)=>{
         res.json(data);
     })

@@ -1,0 +1,19 @@
+{
+	"minyear": 2018,
+	"maxyear": 2019
+}
+
+{
+	"minyear": 2019,
+	"maxyear": 2020
+}
+
+{
+	"minyear": 2017,
+	"maxyear": 2019
+}
+
+{
+	"minyear": 2021,
+	"maxyear": 2022
+}
